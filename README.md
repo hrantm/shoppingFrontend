@@ -1,6 +1,34 @@
-# Getting Started with Create React App
+# Shopping App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Shopping App is an application that allows users to search for their favorite products, store them in a cart and create orders. Product information is collected through the serpapi api
+
+## Features and Implementation
+
+### Search results
+![Search](assets/search.png)
+
+Users interact with a simple react interface and search for products
+
+### Cart
+![Cart](assets/cart.png)
+
+Users can add items to their cart from the search page and remove items from the cart page. Once the cart is ready, users can create an order
+
+### Orders
+![Orders](assets/orders.png)
+
+Orders are stored in the backend in a sqlite database, and once they are created users are able to view their order history in the orders tab
+
+### Future Develepment
+
+* User authentication, application is sort of useless until there is auth in front of it
+* Security issues in the backend such as using env vars for tokens, possible sql injection issue
+* Probably a better design than using localstorage directly. I know Redux was popular in the past, Context API is used for certain cases so decision
+needs to be made based on application needs
+* Use ORM under the right circumstances, depending on how app grows
+* Infrastructure design changes if app gets significant load, replicate application and run behind a load balancer
+* Use cacheing to speed up search results
+
 
 ## Available Scripts
 
@@ -14,57 +42,4 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This only runs the frontend of the app, you will also need to run the backend which can be found [here](https://github.com/hrantm/shoppingBackend)
